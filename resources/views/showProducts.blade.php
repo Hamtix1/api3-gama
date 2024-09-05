@@ -14,7 +14,8 @@
 </head>
 <nav class="navbar">
     <div class="nav-container">
-        <a href="https://www.gmarketingcreativo.com/" class="brand"><img src="./img/Logo-gamamarketing.png" alt=""></a>
+        <a href="https://www.gmarketingcreativo.com/" class="brand"><img src="./img/Logo-gamamarketing.png"
+                alt=""></a>
         <button class="hamburger" id="hamburger">
             &#9776;
         </button>
@@ -23,13 +24,15 @@
                 <a href="https://www.gmarketingcreativo.com/" class="nav-link">Inicio</a>
             </li>
             <li class="nav-item">
-                <a href="https://www.gmarketingcreativo.com/conocenos/" class="nav-link">Conócenos</a>                
+                <a href="https://www.gmarketingcreativo.com/conocenos/" class="nav-link">Conócenos</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Catalogos <i class="fa fa-caret-down"></i></a>
                 <ul class="dropdown">
-                    <li><a href="https://www.gmarketingcreativo.com/api1-gama/" class="dropdown-link">Catalogo de productos 1</a></li>
-                    <li><a href="https://www.gmarketingcreativo.com/catalogo-de-productos-2/" class="dropdown-link">Catalogo de productos 2</a></li>
+                    <li><a href="https://www.gmarketingcreativo.com/api1-gama/" class="dropdown-link">Catalogo de
+                            productos 1</a></li>
+                    <li><a href="https://www.gmarketingcreativo.com/catalogo-de-productos-2/"
+                            class="dropdown-link">Catalogo de productos 2</a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -52,7 +55,10 @@
             <input type="text" placeholder="Busca tu producto" class="input_text" id="searchInput">
             <p class="title_h3">Categorias</p>
             <select id="selector" name="simple" class="category_filter">
-                <option selected value="Todas las Categorías">Todas las Categorías</option>
+                <option selected value="" selected>Seleccione Categoría</option>
+                @foreach ($data as $producto)
+                    <option selected value="{{ $producto['name'] }}">{{ mb_convert_case($producto['name'], MB_CASE_TITLE, "UTF-8") }}</option>
+                @endforeach                
             </select>
         </div>
         <div class="products_list_content" id="productListContent">
@@ -77,10 +83,3 @@
 </body>
 
 </html>
-<div>
-    @foreach($data as $producto)
-        <div>
-            <h4>{{$producto['name']}}</h4>
-        </div>
-    @endforeach
-</div>
