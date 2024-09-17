@@ -18,9 +18,7 @@
                         <ul class="gama_lista_2">
                             @foreach ($categoria['subcategorias'] as $subCategoria)
                                 <li class="gama_sub_categoria">
-                                    <a href="/categoria/{{ $subCategoria['id'] }}">
-                                        {{ mb_convert_case($subCategoria['name'], MB_CASE_TITLE, 'UTF-8') }}
-                                    </a>
+                                    <a href="{{route('subCategoria',['id' => $subCategoria['id']])}}">{{ mb_convert_case($subCategoria['name'], MB_CASE_TITLE, 'UTF-8') }}</a>
                                 </li>
                             @endforeach
                         </ul>

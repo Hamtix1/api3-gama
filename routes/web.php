@@ -13,6 +13,6 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', [ProductController::class, 'index']);
-Route::get('/categoria/{id}', [ProductController::class, 'showCategoria']);
+Route::get('/', [ProductController::class, 'index'])->name('home');
+Route::get('/categoria/{id}', [ProductController::class, 'showCategoria'])->name('subCategoria');
 Route::get('/producto/{id}/{idProducto}', [ProductController::class, 'showProducto'])->name('producto');

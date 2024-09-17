@@ -50,7 +50,7 @@
         </div>
     </nav>
     <div class="page_title">
-        <h2>Catálogo de productos número 1</h2>
+        <h2>Catálogo de productos número 3</h2>
     </div>
     @yield('content')
     <script src={{asset('js/categorias.js')}}></script>
