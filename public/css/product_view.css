@@ -1,0 +1,29 @@
+.product_content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product_image{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.product_image img{
+    width: 100%;
+}
+
+.product_description{
+    width: 50%;
+}
+
+/* ----RESPONSIVE DESIGN------ */
+
+@media screen and (max-width: 768px) {
+    .product_image{
+        width: 100%;
+    }
+
+    .product_description{
+        padding: 10px;
+        width: 100%;
+    }
+}
